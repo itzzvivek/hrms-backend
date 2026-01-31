@@ -3,7 +3,7 @@ from django.db import models
 
 class Employee(models.Model):
     employee_id = models.AutoField(primary_key=True, unique=True, editable=False)
-    full_name = models.CharField(max_length=100)
+    full_name = models.CharField(max_length=100, default="full_name")
     email = models.EmailField(unique=True)
     department = models.CharField(max_length=50)
 
